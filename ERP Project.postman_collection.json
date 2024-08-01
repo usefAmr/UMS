@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "6ee15640-605c-4ca9-a3a8-1ed13d460091",
+		"name": "ERP Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25539006",
+		"_collection_link": "https://restless-spaceship-1619.postman.co/workspace/New-Team-Workspace~c8fc3cf3-76fb-4e81-9d29-67dae050c215/collection/25539006-6ee15640-605c-4ca9-a3a8-1ed13d460091?action=share&source=collection_link&creator=25539006"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTE5NTQzZjM3NjI5OGJhNDA3N2MwZCIsIm5hbWUiOiJTb2hpbGEiLCJlbWFpbCI6InNvaGlsYXNheWVkNnMuc0BnbWFpbC5jb20iLCJpYXQiOjE3MDkyOTUwMDEsImV4cCI6MTcwOTI5ODYwMX0.RH58KUaaCHSSZRjLmFXM8OZEhvP97_A2RB-WMslRKEg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Amira\",\r\n    \"email\":\"amirafahmy@gmail.com\",\r\n    \"password\":\"Amira@110\",\r\n    \"cPassword\":\"Amira@110\",\r\n    \"role\":\"admin\",\r\n    \"level\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/adduser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"email\":\"amirafahmy@gmail.com\",\r\n    \"password\":\"Amira@110\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sohilasayed6s.s@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/forgetpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"forgetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA1OTc4ODEsImV4cCI6MTcxMDYwMTQ4MX0.oHZfJNj4BAwiOaNpZ59-z5uvimn9BTBZ2y2RUlFOQag",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/logout?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA1OTc4ODEsImV4cCI6MTcxMDYwMTQ4MX0.oHZfJNj4BAwiOaNpZ59-z5uvimn9BTBZ2y2RUlFOQag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA1OTc4ODEsImV4cCI6MTcxMDYwMTQ4MX0.oHZfJNj4BAwiOaNpZ59-z5uvimn9BTBZ2y2RUlFOQag"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/getuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjU5YzljYjJhMmNmODU5ZTczOTRmYSIsIm5hbWUiOiJTb2hpbGEiLCJlbWFpbCI6InNvaGlsYXNheWVkNnMuc0BnbWFpbC5jb20iLCJpYXQiOjE3MTA1OTczNTYsImV4cCI6MTcxMDYwMDk1Nn0.wiunDZePy52wylhCrKXy5QhH3-MNOUzfEHYeGATc_G8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/getuserById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"getuserById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA1OTc4ODEsImV4cCI6MTcxMDYwMTQ4MX0.oHZfJNj4BAwiOaNpZ59-z5uvimn9BTBZ2y2RUlFOQag",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"65f59c9cb2a2cf859e7394fa\",\r\n    \"role\":\"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/updateuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"updateuser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Image",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTE5NTQzZjM3NjI5OGJhNDA3N2MwZCIsIm5hbWUiOiJTb2hpbGEiLCJlbWFpbCI6InNvaGlsYXNheWVkNnMuc0BnbWFpbC5jb20iLCJpYXQiOjE3MDkyOTUwMDEsImV4cCI6MTcwOTI5ODYwMX0.RH58KUaaCHSSZRjLmFXM8OZEhvP97_A2RB-WMslRKEg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Hazem/Desktop/1692983929229.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/profileimage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"profileimage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZTFjMjM4ZDE0OTg4YjJhYzE0NzhhMSIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFtZXJvMzgwQGdtYWlsLmNvbSIsImlhdCI6MTcwOTI5NDE3OSwiZXhwIjoxNzA5Mjk3Nzc5fQ._yxZzOAZSNYtiKgLQdBHfXfFAq_D2wLp9gkxRxC6N4k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Sohila's Work/Images/1_XcE0wR1ZmWLFbdF2dE5WuA.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Services",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/Services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"Services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Specific Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA2MDIzMDIsImV4cCI6MTcxMDYwNTkwMn0.dGJawioPBamHkwDECRn2UyuhOtKL9yMGS4GOtfV68VI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"65f5ba8ec2beb6ab120583db\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/serviceWithId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"serviceWithId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA2MDIzMDIsImV4cCI6MTcxMDYwNTkwMn0.dGJawioPBamHkwDECRn2UyuhOtKL9yMGS4GOtfV68VI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/ActiveServices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"ActiveServices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA2MDI4NDEsImV4cCI6MTcxMDYwNjQ0MX0.upX6qpM_RSbeFpC13CJcmyXDklWby1R8TVRvwtLVvFc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"65f5ba8ec2beb6ab120583db\",\r\n    \"validUntilDate\": \"31/12/2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/Servicess",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"Servicess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZjVhNDA3NmE5YTU5MWNmMzc2YWI2YyIsIm5hbWUiOiJBbWlyYSIsImVtYWlsIjoiYW1pcmFmYWhteUBnbWFpbC5jb20iLCJpYXQiOjE3MTA2MDI4NDEsImV4cCI6MTcxMDYwNjQ0MX0.upX6qpM_RSbeFpC13CJcmyXDklWby1R8TVRvwtLVvFc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rsom elkeed\",\r\n    \"validUntilDate\":\"31/9/2024\",\r\n    \"fees\":200,\r\n    \"state\":\"locked\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/addServices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"addServices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
